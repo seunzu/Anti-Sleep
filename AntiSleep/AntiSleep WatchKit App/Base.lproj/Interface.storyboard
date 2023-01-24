@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21507" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21501"/>
+    </dependencies>
+    <scenes>
+        <!--startDrive-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="startDrive" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" height="48" alignment="left" title="Drive" id="iNk-JY-VUq">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                            <connections>
+                                <action selector="dBtnTapped" destination="AgC-eL-Hgc" id="eDQ-ch-gfb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="driveBtn" destination="iNk-JY-VUq" id="FGi-Fe-2Xj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="98" y="-142"/>
+        </scene>
+        <!--drive-->
+        <scene sceneID="8aI-ns-Rx1">
+            <objects>
+                <controller identifier="drive" id="nlS-Vz-nza" customClass="InterfaceController" customModule="AntiSleep_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="심박수 : 0" textAlignment="center" id="AJT-JP-B41">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <label alignment="left" text="졸음 운전 횟수 : 0" textAlignment="center" id="fZE-0a-sOK">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <button width="1" alignment="center" title="Stop Driving" id="6bW-wT-Dnp">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                            <connections>
+                                <action selector="sdBtnTapped" destination="nlS-Vz-nza" id="C8v-ky-7iu"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="countTextLabel" destination="fZE-0a-sOK" id="t6Q-bM-IHM"/>
+                        <outlet property="stopDrivingBtn" destination="6bW-wT-Dnp" id="oYd-7o-Mrd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="474" y="-142"/>
+        </scene>
+        <!--finishDrive-->
+        <scene sceneID="hhl-KI-SO1">
+            <objects>
+                <controller identifier="finishDrive" id="DUc-aZ-MnR" customClass="InterfaceController" customModule="AntiSleep_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Reset" id="6aF-Y0-TMH">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                            <connections>
+                                <action selector="fdTapped" destination="DUc-aZ-MnR" id="cpM-6a-R7h"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="finishDriveBtn" destination="6aF-Y0-TMH" id="Gsh-o2-4RT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="851" y="-142"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="98" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="240"/>
+        </scene>
+    </scenes>
+</document>

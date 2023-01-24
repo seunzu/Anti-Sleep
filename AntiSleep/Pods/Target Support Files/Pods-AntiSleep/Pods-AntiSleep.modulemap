@@ -1,0 +1,6 @@
+framework module Pods_AntiSleep {
+  umbrella header "Pods-AntiSleep-umbrella.h"
+
+  export *
+  module * { export * }
+}
