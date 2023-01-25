@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D138CDB43ED32AF2299C2E6 /* Pods_AntiSleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4519DA2D8893807FCE5BAC40 /* Pods_AntiSleep.framework */; };
+		363F250C2981488200BC76DC /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 363F250B2981488200BC76DC /* PushNotificationPayload.apns */; };
 		3C205924BDACEF332805A474 /* Pods_AntiSleep_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F260A7F7B8F0A3A710B3F7 /* Pods_AntiSleep_WatchKit_Extension.framework */; };
 		4BDD192C8F14A09641205D35 /* Pods_AntiSleep_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */; };
 		7D71E409297AE4920094F088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E408297AE4920094F088 /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntiSleep_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BB150D76A77A6AE573779D /* Pods-AntiSleep WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit Extension/Pods-AntiSleep WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		363F250B2981488200BC76DC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4519DA2D8893807FCE5BAC40 /* Pods_AntiSleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntiSleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A1AF2B0770A5E17DB4C6C3 /* Pods-AntiSleep WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit App/Pods-AntiSleep WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		51C67CCA26F7C0A4E27D82FD /* Pods-AntiSleep WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit Extension/Pods-AntiSleep WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 		7D71E432297AE4950094F088 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		7D71E434297AE4960094F088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D71E436297AE4960094F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D71E437297AE4960094F088 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7DE414A929806330004A798B /* AntiSleep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AntiSleep.entitlements; sourceTree = "<group>"; };
 		7DE414AC2980659C004A798B /* AntiSleep WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AntiSleep WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		81DE5CD3C4FC3FAEF052678C /* Pods-AntiSleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep.release.xcconfig"; path = "Target Support Files/Pods-AntiSleep/Pods-AntiSleep.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 			children = (
 				7D71E41E297AE4940094F088 /* Interface.storyboard */,
 				7D71E421297AE4950094F088 /* Assets.xcassets */,
+				363F250B2981488200BC76DC /* PushNotificationPayload.apns */,
 			);
 			path = "AntiSleep WatchKit App";
 			sourceTree = "<group>";
@@ -199,7 +201,6 @@
 				7D71E432297AE4950094F088 /* ComplicationController.swift */,
 				7D71E434297AE4960094F088 /* Assets.xcassets */,
 				7D71E436297AE4960094F088 /* Info.plist */,
-				7D71E437297AE4960094F088 /* PushNotificationPayload.apns */,
 			);
 			path = "AntiSleep WatchKit Extension";
 			sourceTree = "<group>";
@@ -340,6 +341,7 @@
 			files = (
 				7D71E422297AE4950094F088 /* Assets.xcassets in Resources */,
 				7D71E420297AE4940094F088 /* Interface.storyboard in Resources */,
+				363F250C2981488200BC76DC /* PushNotificationPayload.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
