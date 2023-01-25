@@ -199,8 +199,8 @@
 				7D71E42E297AE4950094F088 /* ExtensionDelegate.swift */,
 				7D71E430297AE4950094F088 /* NotificationController.swift */,
 				7D71E432297AE4950094F088 /* ComplicationController.swift */,
-				7D71E434297AE4960094F088 /* Assets.xcassets */,
 				7D71E436297AE4960094F088 /* Info.plist */,
+				7D71E434297AE4960094F088 /* Assets.xcassets */,
 			);
 			path = "AntiSleep WatchKit Extension";
 			sourceTree = "<group>";
@@ -611,10 +611,12 @@
 				INFOPLIST_FILE = "AntiSleep WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = AntiSleep_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Health Record";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health Share";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Health Update";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_WKExtensionDelegateClassName = AntiSleep_WatchKit_Extension.ExtensionDelegate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,10 +649,12 @@
 				INFOPLIST_FILE = "AntiSleep WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = AntiSleep_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Health Record";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health Share";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Health Update";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_WKExtensionDelegateClassName = AntiSleep_WatchKit_Extension.ExtensionDelegate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,9 +742,9 @@
 				DEVELOPMENT_TEAM = ASM49GKW7Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AntiSleep/Info.plist;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Health Record";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health Share";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Health Update";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -773,9 +777,9 @@
 				DEVELOPMENT_TEAM = ASM49GKW7Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AntiSleep/Info.plist;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Health Record";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health Share";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Health Update";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

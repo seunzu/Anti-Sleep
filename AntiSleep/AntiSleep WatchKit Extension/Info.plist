@@ -11,6 +11,14 @@
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
+		<key>Privacy - Health Share Usage Description</key>
+		<string>AntiSleep wants to access your health data in order to analyze your health and best advice</string>
+		<key>Privacy - Health Update Usage Description</key>
+		<string>AntiSleep wants to access your health data in order to analyze your health and best advice</string>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>
