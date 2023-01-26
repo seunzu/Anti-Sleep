@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLT-0u-JY0">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                            <tabBar contentMode="bottom" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLT-0u-JY0">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RLT-0u-JY0" secondAttribute="height" multiplier="414:49" id="O7D-mr-Yva"/>
@@ -28,24 +28,29 @@
                                     <tabBarItem systemItem="more" id="3ZT-xv-uWJ"/>
                                 </items>
                             </tabBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BPM : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIH-Jn-HCo">
-                                <rect key="frame" x="172.5" y="433" width="69" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-mU-MUz" customClass="HomeTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="415" height="450"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBJ-9z-hxJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="415" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baC-IK-Scb">
+                                        <rect key="frame" x="0.0" y="150" width="415" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XpI-ve-YGB">
+                                        <rect key="frame" x="0.0" y="300" width="415" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="tIH-Jn-HCo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NnX-RF-m7n"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RLT-0u-JY0" secondAttribute="bottom" id="aRK-my-ASy"/>
-                            <constraint firstItem="tIH-Jn-HCo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fz5-Jd-6Ym"/>
-                            <constraint firstItem="RLT-0u-JY0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jN1-3d-mEg"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="heartRateLabel" destination="tIH-Jn-HCo" id="dnE-Cc-XfZ"/>
+                        <outlet property="tableView" destination="zDe-mU-MUz" id="ivU-Dk-RQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

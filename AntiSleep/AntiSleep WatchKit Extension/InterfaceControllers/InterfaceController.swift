@@ -11,59 +11,48 @@ import HealthKit
 import CoreLocation
 
 class InterfaceController: WKInterfaceController {
-    var sleepCount : Int = 0
+    @IBOutlet weak var heartImage: WKInterfaceImage!
+    @IBOutlet weak var driveBtn: WKInterfaceButton!
+    @IBOutlet weak var heartRateCountLabel: WKInterfaceLabel!
+    @IBOutlet weak var sleepCountLabel: WKInterfaceLabel!
     
+    var sleepCount : Int = 0
     let healthStore = HKHealthStore()
     let heartRateQuantity = HKUnit(from: "count/min")
-        
     var value : Int = 0
-    
+
     // 심박수, 수면시간 권한 요청
     let typeToRead = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!,
                     HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!])
     let typeToShare = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!,
                     HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!])
     var sleepData:[HKCategorySample] = [] // 수면 데이터 저장 배열
-    
+
     var locationManager = CLLocationManager()
-    
-    @IBOutlet weak var driveBtn: WKInterfaceButton!
-    @IBOutlet weak var stopDrivingBtn: WKInterfaceButton!
-    @IBOutlet weak var finishDriveBtn: WKInterfaceButton!
-    
-    @IBOutlet weak var heartRateCountLabel: WKInterfaceLabel!
-    @IBOutlet weak var sleepCountLabel: WKInterfaceLabel!
-    
+
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
         configure()
     }
-    
+
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
     }
-    
+
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
     }
-    
+
     @IBAction func dBtnTapped() {
-        self.pushController(withName: "drive", context: nil)
+        //self.pushController(withName: "drive", context: nil)
+        driveBtn.setTitle("Driving")
     }
-    @IBAction func sdBtnTapped() {
-        //driveBtn.setTitle("Driving")
-        self.pushController(withName: "finishDrive", context: nil)
+
+    func setLabel() {
+        self.sleepCountLabel.setText("졸음 운전 횟수 : \(sleepCount)")
+        self.heartRateCountLabel.setText("\(value)")
     }
-    @IBAction func fdTapped() {
-        //driveBtn.setTitle("Driving")
-        self.pushController(withName: "startDrive", context: nil)
-    }
-    
-//    func setLabel() {
-//        self.sleepCountLabel.setText("졸음 운전 횟수 : \(sleepCount)")
-//        self.heartRateCountLabel.setText("")
-//    }
-    
+
     func configure() {
         if !HKHealthStore.isHealthDataAvailable() {
             //
@@ -71,7 +60,7 @@ class InterfaceController: WKInterfaceController {
             requestAuthorization()
         }
     }
-    
+
     // healthKit 권한 요청
     func requestAuthorization() {
         self.healthStore.requestAuthorization(toShare: typeToShare, read: typeToRead) { (success, error) in
@@ -86,8 +75,7 @@ class InterfaceController: WKInterfaceController {
             }
         }
     }
-    
-    
+
     // 심장 박동수 가져오기
     // https://ios-dev-tech.tistory.com/12
     func getHeartRateData(completion: @escaping ([HKSample]) -> Void) {
@@ -118,5 +106,5 @@ class InterfaceController: WKInterfaceController {
         }
         healthStore.execute(query)
     }
-    
+
 }

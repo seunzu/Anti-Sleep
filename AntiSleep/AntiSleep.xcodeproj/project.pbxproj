@@ -26,6 +26,8 @@
 		7D71E431297AE4950094F088 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E430297AE4950094F088 /* NotificationController.swift */; };
 		7D71E433297AE4950094F088 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E432297AE4950094F088 /* ComplicationController.swift */; };
 		7D71E435297AE4960094F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E434297AE4960094F088 /* Assets.xcassets */; };
+		7D9A77B0298276E20045218C /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A77AF298276E20045218C /* heart.png */; };
+		7D9A77B1298276E20045218C /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A77AF298276E20045218C /* heart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,7 @@
 		7D71E432297AE4950094F088 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		7D71E434297AE4960094F088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D71E436297AE4960094F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D9A77AF298276E20045218C /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		7DE414A929806330004A798B /* AntiSleep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AntiSleep.entitlements; sourceTree = "<group>"; };
 		7DE414AC2980659C004A798B /* AntiSleep WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AntiSleep WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		81DE5CD3C4FC3FAEF052678C /* Pods-AntiSleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep.release.xcconfig"; path = "Target Support Files/Pods-AntiSleep/Pods-AntiSleep.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		7D71E41D297AE4940094F088 /* AntiSleep WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				7D9A77AB298273BA0045218C /* images */,
 				7D71E41E297AE4940094F088 /* Interface.storyboard */,
 				7D71E421297AE4950094F088 /* Assets.xcassets */,
 				363F250B2981488200BC76DC /* PushNotificationPayload.apns */,
@@ -203,6 +207,14 @@
 				7D71E434297AE4960094F088 /* Assets.xcassets */,
 			);
 			path = "AntiSleep WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7D9A77AB298273BA0045218C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7D9A77AF298276E20045218C /* heart.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		7DE414A829805F4D004A798B /* InterfaceControllers */ = {
@@ -340,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D71E422297AE4950094F088 /* Assets.xcassets in Resources */,
+				7D9A77B0298276E20045218C /* heart.png in Resources */,
 				7D71E420297AE4940094F088 /* Interface.storyboard in Resources */,
 				363F250C2981488200BC76DC /* PushNotificationPayload.apns in Resources */,
 			);
@@ -350,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D71E435297AE4960094F088 /* Assets.xcassets in Resources */,
+				7D9A77B1298276E20045218C /* heart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
