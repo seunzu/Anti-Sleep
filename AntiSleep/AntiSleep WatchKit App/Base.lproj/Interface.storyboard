@@ -35,6 +35,7 @@
                     </items>
                     <connections>
                         <outlet property="driveBtn" destination="iNk-JY-VUq" id="FGi-Fe-2Xj"/>
+                        <outlet property="driveTimer" destination="R6h-f3-D2x" id="fFl-ay-3lW"/>
                         <segue destination="nlS-Vz-nza" kind="relationship" relationship="nextPage" id="9NF-kS-wyM"/>
                     </connections>
                 </controller>
@@ -49,11 +50,11 @@
                         <imageView width="130" height="130" alignment="center" image="heart" id="iff-f3-K3A"/>
                         <group width="1" alignment="center" verticalAlignment="bottom" layout="vertical" id="9sx-dW-xak">
                             <items>
-                                <label alignment="center" text="심박수 : 0" textAlignment="center" id="AJT-JP-B41">
+                                <label alignment="center" text="label" textAlignment="center" id="AJT-JP-B41">
                                     <accessibilityTraits key="accessibilityTraits" none="YES"/>
                                     <fontDescription key="font" type="system" pointSize="25"/>
                                 </label>
-                                <label alignment="center" verticalAlignment="center" text="졸음 운전 횟수 : 0" textAlignment="center" id="fZE-0a-sOK">
+                                <label alignment="center" verticalAlignment="center" text="label" textAlignment="center" id="fZE-0a-sOK">
                                     <accessibilityTraits key="accessibilityTraits" none="YES"/>
                                     <fontDescription key="font" type="system" pointSize="25"/>
                                 </label>

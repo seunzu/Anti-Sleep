@@ -17,40 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="bottom" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLT-0u-JY0">
-                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="RLT-0u-JY0" secondAttribute="height" multiplier="414:49" id="O7D-mr-Yva"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="person" image="person.circle" catalog="system" selectedImage="person.circle.fill" id="eeS-hp-6xG"/>
-                                    <tabBarItem systemItem="more" id="3ZT-xv-uWJ"/>
-                                </items>
-                            </tabBar>
-                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-mU-MUz" customClass="HomeTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="415" height="450"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBJ-9z-hxJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="415" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baC-IK-Scb">
-                                        <rect key="frame" x="0.0" y="150" width="415" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XpI-ve-YGB">
-                                        <rect key="frame" x="0.0" y="300" width="415" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeartRate BPM : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9h-sc-wpR">
+                                <rect key="frame" x="115.5" y="433" width="183" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ct-tW-tIx">
+                                <rect key="frame" x="166" y="155" width="92" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Drive">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K9h-sc-wpR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hva-My-oee"/>
+                            <constraint firstItem="K9h-sc-wpR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w1t-kg-Typ"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="zDe-mU-MUz" id="ivU-Dk-RQh"/>
+                        <outlet property="driveBtn" destination="0ct-tW-tIx" id="6Sj-hV-FmW"/>
+                        <outlet property="heartRateLabel" destination="K9h-sc-wpR" id="YUc-ln-A3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,8 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle" catalog="system" width="128" height="123"/>
-        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
