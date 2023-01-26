@@ -14,6 +14,9 @@ class InterfaceController: WKInterfaceController {
     var sleepCount : Int = 0
     
     let healthStore = HKHealthStore()
+    let heartRateQuantity = HKUnit(from: "count/min")
+        
+    var value : Int = 0
     
     // 심박수, 수면시간 권한 요청
     let typeToRead = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!,
@@ -28,8 +31,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var stopDrivingBtn: WKInterfaceButton!
     @IBOutlet weak var finishDriveBtn: WKInterfaceButton!
     
-    @IBOutlet weak var countTextLabel: WKInterfaceLabel!
-    
+    @IBOutlet weak var heartRateCountLabel: WKInterfaceLabel!
+    @IBOutlet weak var sleepCountLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
@@ -56,9 +59,10 @@ class InterfaceController: WKInterfaceController {
         self.pushController(withName: "startDrive", context: nil)
     }
     
-    func setLabel() {
-        self.countTextLabel.setText("졸음 운전 횟수 : \(sleepCount)")
-    }
+//    func setLabel() {
+//        self.sleepCountLabel.setText("졸음 운전 횟수 : \(sleepCount)")
+//        self.heartRateCountLabel.setText("")
+//    }
     
     func configure() {
         if !HKHealthStore.isHealthDataAvailable() {
@@ -68,6 +72,7 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
+    // healthKit 권한 요청
     func requestAuthorization() {
         self.healthStore.requestAuthorization(toShare: typeToShare, read: typeToRead) { (success, error) in
             if error != nil {
@@ -82,13 +87,19 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
+    
     // 심장 박동수 가져오기
     // https://ios-dev-tech.tistory.com/12
     func getHeartRateData(completion: @escaping ([HKSample]) -> Void) {
+        // HKObjectType: HealthKitStore 대한 특정 유형의 데이터 식별 클래스
+        // HKObjectType.quantityType: identifier에 대한 수량 유형 반환
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else {
             return
         }
+        // startDate: 1시간 전 ~ 현재 날짜 시간 정보
         let startDate = Calendar.current.date(byAdding: .hour, value: -1, to: Date())
+        // HKQuery: HealthKit 안 모든 query class 위한 추상 클래스
+        // HKQuery.predicateForSamples: 특정 시간 동안의 특정 데이터 반환
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)
         let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) {
@@ -107,4 +118,5 @@ class InterfaceController: WKInterfaceController {
         }
         healthStore.execute(query)
     }
+    
 }

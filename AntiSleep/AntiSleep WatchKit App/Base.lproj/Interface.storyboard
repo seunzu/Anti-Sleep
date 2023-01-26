@@ -11,7 +11,7 @@
             <objects>
                 <controller identifier="startDrive" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" height="48" alignment="left" title="Drive" id="iNk-JY-VUq">
+                        <button width="1" height="48" alignment="center" verticalAlignment="center" title="Drive" id="iNk-JY-VUq">
                             <fontDescription key="font" type="system" pointSize="25"/>
                             <connections>
                                 <action selector="dBtnTapped" destination="AgC-eL-Hgc" id="eDQ-ch-gfb"/>
@@ -30,13 +30,13 @@
             <objects>
                 <controller identifier="drive" id="nlS-Vz-nza" customClass="InterfaceController" customModule="AntiSleep_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="심박수 : 0" textAlignment="center" id="AJT-JP-B41">
+                        <label alignment="center" text="심박수 : 0" textAlignment="center" id="AJT-JP-B41">
                             <fontDescription key="font" type="system" pointSize="25"/>
                         </label>
-                        <label alignment="left" text="졸음 운전 횟수 : 0" textAlignment="center" id="fZE-0a-sOK">
+                        <label alignment="center" verticalAlignment="center" text="졸음 운전 횟수 : 0" textAlignment="center" id="fZE-0a-sOK">
                             <fontDescription key="font" type="system" pointSize="25"/>
                         </label>
-                        <button width="1" alignment="center" title="Stop Driving" id="6bW-wT-Dnp">
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Stop Driving" id="6bW-wT-Dnp">
                             <fontDescription key="font" type="system" pointSize="25"/>
                             <connections>
                                 <action selector="sdBtnTapped" destination="nlS-Vz-nza" id="C8v-ky-7iu"/>
@@ -44,7 +44,8 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="countTextLabel" destination="fZE-0a-sOK" id="t6Q-bM-IHM"/>
+                        <outlet property="heartRateCountLabel" destination="AJT-JP-B41" id="poq-A4-pvG"/>
+                        <outlet property="sleepCountLabel" destination="fZE-0a-sOK" id="oBi-s7-wVF"/>
                         <outlet property="stopDrivingBtn" destination="6bW-wT-Dnp" id="oYd-7o-Mrd"/>
                     </connections>
                 </controller>
@@ -56,7 +57,13 @@
             <objects>
                 <controller identifier="finishDrive" id="DUc-aZ-MnR" customClass="InterfaceController" customModule="AntiSleep_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Reset" id="6aF-Y0-TMH">
+                        <label alignment="center" text="졸음 운전 횟수 : 0" id="gRq-PN-Hfu">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="평균 심박수 : 0" id="Dfa-H4-3Qz">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Reset" id="6aF-Y0-TMH">
                             <fontDescription key="font" type="system" pointSize="25"/>
                             <connections>
                                 <action selector="fdTapped" destination="DUc-aZ-MnR" id="cpM-6a-R7h"/>
@@ -65,6 +72,7 @@
                     </items>
                     <connections>
                         <outlet property="finishDriveBtn" destination="6aF-Y0-TMH" id="Gsh-o2-4RT"/>
+                        <outlet property="sleepCountLabel" destination="gRq-PN-Hfu" id="15Y-L9-iU6"/>
                     </connections>
                 </controller>
             </objects>

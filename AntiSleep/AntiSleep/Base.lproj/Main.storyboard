@@ -28,14 +28,25 @@
                                     <tabBarItem systemItem="more" id="3ZT-xv-uWJ"/>
                                 </items>
                             </tabBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BPM : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIH-Jn-HCo">
+                                <rect key="frame" x="172.5" y="433" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tIH-Jn-HCo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NnX-RF-m7n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RLT-0u-JY0" secondAttribute="bottom" id="aRK-my-ASy"/>
+                            <constraint firstItem="tIH-Jn-HCo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fz5-Jd-6Ym"/>
                             <constraint firstItem="RLT-0u-JY0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jN1-3d-mEg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heartRateLabel" destination="tIH-Jn-HCo" id="dnE-Cc-XfZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

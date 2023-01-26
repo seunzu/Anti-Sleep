@@ -11,6 +11,8 @@ import HealthKit
 class ViewController: UIViewController {
     let healthStore = HKHealthStore()
     
+    @IBOutlet weak var heartRateLabel: UILabel!
+    
     // 심박수, 수면시간 권한 요청
     let typeToRead = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!,
                     HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!])
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
                     HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!])
     var sleepData:[HKCategorySample] = [] // 수면 데이터 저장 배열
 
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
