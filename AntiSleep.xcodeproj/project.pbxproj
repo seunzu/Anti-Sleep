@@ -1,0 +1,860 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D138CDB43ED32AF2299C2E6 /* Pods_AntiSleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4519DA2D8893807FCE5BAC40 /* Pods_AntiSleep.framework */; };
+		363F250C2981488200BC76DC /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 363F250B2981488200BC76DC /* PushNotificationPayload.apns */; };
+		3C205924BDACEF332805A474 /* Pods_AntiSleep_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F260A7F7B8F0A3A710B3F7 /* Pods_AntiSleep_WatchKit_Extension.framework */; };
+		4BDD192C8F14A09641205D35 /* Pods_AntiSleep_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */; };
+		7D71E409297AE4920094F088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E408297AE4920094F088 /* AppDelegate.swift */; };
+		7D71E40B297AE4920094F088 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E40A297AE4920094F088 /* SceneDelegate.swift */; };
+		7D71E40D297AE4920094F088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E40C297AE4920094F088 /* ViewController.swift */; };
+		7D71E410297AE4920094F088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E40E297AE4920094F088 /* Main.storyboard */; };
+		7D71E412297AE4940094F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E411297AE4940094F088 /* Assets.xcassets */; };
+		7D71E415297AE4940094F088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E413297AE4940094F088 /* LaunchScreen.storyboard */; };
+		7D71E41A297AE4940094F088 /* AntiSleep WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7D71E419297AE4940094F088 /* AntiSleep WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D71E420297AE4940094F088 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E41E297AE4940094F088 /* Interface.storyboard */; };
+		7D71E422297AE4950094F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E421297AE4950094F088 /* Assets.xcassets */; };
+		7D71E428297AE4950094F088 /* AntiSleep WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D71E427297AE4950094F088 /* AntiSleep WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D71E42D297AE4950094F088 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E42C297AE4950094F088 /* InterfaceController.swift */; };
+		7D71E42F297AE4950094F088 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E42E297AE4950094F088 /* ExtensionDelegate.swift */; };
+		7D71E431297AE4950094F088 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E430297AE4950094F088 /* NotificationController.swift */; };
+		7D71E433297AE4950094F088 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E432297AE4950094F088 /* ComplicationController.swift */; };
+		7D71E435297AE4960094F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E434297AE4960094F088 /* Assets.xcassets */; };
+		7D9A77B0298276E20045218C /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A77AF298276E20045218C /* heart.png */; };
+		7D9A77B1298276E20045218C /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A77AF298276E20045218C /* heart.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D71E41B297AE4940094F088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D71E3FD297AE4910094F088 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D71E418297AE4940094F088;
+			remoteInfo = "AntiSleep WatchKit App";
+		};
+		7D71E429297AE4950094F088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D71E3FD297AE4910094F088 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D71E426297AE4950094F088;
+			remoteInfo = "AntiSleep WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D71E43D297AE4960094F088 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7D71E428297AE4950094F088 /* AntiSleep WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D71E441297AE4960094F088 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7D71E41A297AE4940094F088 /* AntiSleep WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntiSleep_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28BB150D76A77A6AE573779D /* Pods-AntiSleep WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit Extension/Pods-AntiSleep WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		363F250B2981488200BC76DC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4519DA2D8893807FCE5BAC40 /* Pods_AntiSleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntiSleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A1AF2B0770A5E17DB4C6C3 /* Pods-AntiSleep WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit App/Pods-AntiSleep WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		51C67CCA26F7C0A4E27D82FD /* Pods-AntiSleep WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit Extension/Pods-AntiSleep WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		77E680C2398B28753E2C76D2 /* Pods-AntiSleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep/Pods-AntiSleep.debug.xcconfig"; sourceTree = "<group>"; };
+		7D71E405297AE4920094F088 /* AntiSleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiSleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D71E408297AE4920094F088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D71E40A297AE4920094F088 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D71E40C297AE4920094F088 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D71E40F297AE4920094F088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D71E411297AE4940094F088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D71E414297AE4940094F088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D71E416297AE4940094F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D71E419297AE4940094F088 /* AntiSleep WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AntiSleep WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D71E41F297AE4940094F088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7D71E421297AE4950094F088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D71E427297AE4950094F088 /* AntiSleep WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AntiSleep WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D71E42C297AE4950094F088 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7D71E42E297AE4950094F088 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		7D71E430297AE4950094F088 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7D71E432297AE4950094F088 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7D71E434297AE4960094F088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D71E436297AE4960094F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D9A77AF298276E20045218C /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		7DE414A929806330004A798B /* AntiSleep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AntiSleep.entitlements; sourceTree = "<group>"; };
+		7DE414AC2980659C004A798B /* AntiSleep WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AntiSleep WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		81DE5CD3C4FC3FAEF052678C /* Pods-AntiSleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep.release.xcconfig"; path = "Target Support Files/Pods-AntiSleep/Pods-AntiSleep.release.xcconfig"; sourceTree = "<group>"; };
+		B04BABD9CD039A09C6A618F3 /* Pods-AntiSleep WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit App/Pods-AntiSleep WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		B6F260A7F7B8F0A3A710B3F7 /* Pods_AntiSleep_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntiSleep_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D71E402297AE4920094F088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D138CDB43ED32AF2299C2E6 /* Pods_AntiSleep.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D71E424297AE4950094F088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C205924BDACEF332805A474 /* Pods_AntiSleep_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB881D6FCF264F0C1D53FBBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BDD192C8F14A09641205D35 /* Pods_AntiSleep_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D4CB431CE92A359E067A644 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77E680C2398B28753E2C76D2 /* Pods-AntiSleep.debug.xcconfig */,
+				81DE5CD3C4FC3FAEF052678C /* Pods-AntiSleep.release.xcconfig */,
+				50A1AF2B0770A5E17DB4C6C3 /* Pods-AntiSleep WatchKit App.debug.xcconfig */,
+				B04BABD9CD039A09C6A618F3 /* Pods-AntiSleep WatchKit App.release.xcconfig */,
+				28BB150D76A77A6AE573779D /* Pods-AntiSleep WatchKit Extension.debug.xcconfig */,
+				51C67CCA26F7C0A4E27D82FD /* Pods-AntiSleep WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7D71E3FC297AE4910094F088 = {
+			isa = PBXGroup;
+			children = (
+				7D71E407297AE4920094F088 /* AntiSleep */,
+				7D71E41D297AE4940094F088 /* AntiSleep WatchKit App */,
+				7D71E42B297AE4950094F088 /* AntiSleep WatchKit Extension */,
+				7D71E406297AE4920094F088 /* Products */,
+				0D4CB431CE92A359E067A644 /* Pods */,
+				A73E8A253F8C343894FFF16E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7D71E406297AE4920094F088 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D71E405297AE4920094F088 /* AntiSleep.app */,
+				7D71E419297AE4940094F088 /* AntiSleep WatchKit App.app */,
+				7D71E427297AE4950094F088 /* AntiSleep WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D71E407297AE4920094F088 /* AntiSleep */ = {
+			isa = PBXGroup;
+			children = (
+				7DE414A929806330004A798B /* AntiSleep.entitlements */,
+				7D71E408297AE4920094F088 /* AppDelegate.swift */,
+				7D71E40A297AE4920094F088 /* SceneDelegate.swift */,
+				7D71E40C297AE4920094F088 /* ViewController.swift */,
+				7D71E40E297AE4920094F088 /* Main.storyboard */,
+				7D71E411297AE4940094F088 /* Assets.xcassets */,
+				7D71E413297AE4940094F088 /* LaunchScreen.storyboard */,
+				7D71E416297AE4940094F088 /* Info.plist */,
+			);
+			path = AntiSleep;
+			sourceTree = "<group>";
+		};
+		7D71E41D297AE4940094F088 /* AntiSleep WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7D9A77AB298273BA0045218C /* images */,
+				7D71E41E297AE4940094F088 /* Interface.storyboard */,
+				7D71E421297AE4950094F088 /* Assets.xcassets */,
+				363F250B2981488200BC76DC /* PushNotificationPayload.apns */,
+			);
+			path = "AntiSleep WatchKit App";
+			sourceTree = "<group>";
+		};
+		7D71E42B297AE4950094F088 /* AntiSleep WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7DE414AC2980659C004A798B /* AntiSleep WatchKit Extension.entitlements */,
+				7DE414A829805F4D004A798B /* InterfaceControllers */,
+				7D71E42E297AE4950094F088 /* ExtensionDelegate.swift */,
+				7D71E430297AE4950094F088 /* NotificationController.swift */,
+				7D71E432297AE4950094F088 /* ComplicationController.swift */,
+				7D71E436297AE4960094F088 /* Info.plist */,
+				7D71E434297AE4960094F088 /* Assets.xcassets */,
+			);
+			path = "AntiSleep WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7D9A77AB298273BA0045218C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7D9A77AF298276E20045218C /* heart.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		7DE414A829805F4D004A798B /* InterfaceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D71E42C297AE4950094F088 /* InterfaceController.swift */,
+			);
+			path = InterfaceControllers;
+			sourceTree = "<group>";
+		};
+		A73E8A253F8C343894FFF16E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4519DA2D8893807FCE5BAC40 /* Pods_AntiSleep.framework */,
+				186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */,
+				B6F260A7F7B8F0A3A710B3F7 /* Pods_AntiSleep_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D71E404297AE4920094F088 /* AntiSleep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D71E442297AE4960094F088 /* Build configuration list for PBXNativeTarget "AntiSleep" */;
+			buildPhases = (
+				408B537C31335C32E8202D08 /* [CP] Check Pods Manifest.lock */,
+				7D71E401297AE4920094F088 /* Sources */,
+				7D71E402297AE4920094F088 /* Frameworks */,
+				7D71E403297AE4920094F088 /* Resources */,
+				7D71E441297AE4960094F088 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D71E41C297AE4940094F088 /* PBXTargetDependency */,
+			);
+			name = AntiSleep;
+			productName = AntiSleep;
+			productReference = 7D71E405297AE4920094F088 /* AntiSleep.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D71E418297AE4940094F088 /* AntiSleep WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D71E43E297AE4960094F088 /* Build configuration list for PBXNativeTarget "AntiSleep WatchKit App" */;
+			buildPhases = (
+				3833514305665FA94400E8B5 /* [CP] Check Pods Manifest.lock */,
+				7D71E417297AE4940094F088 /* Resources */,
+				7D71E43D297AE4960094F088 /* Embed App Extensions */,
+				FB881D6FCF264F0C1D53FBBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D71E42A297AE4950094F088 /* PBXTargetDependency */,
+			);
+			name = "AntiSleep WatchKit App";
+			productName = "AntiSleep WatchKit App";
+			productReference = 7D71E419297AE4940094F088 /* AntiSleep WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7D71E426297AE4950094F088 /* AntiSleep WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D71E43A297AE4960094F088 /* Build configuration list for PBXNativeTarget "AntiSleep WatchKit Extension" */;
+			buildPhases = (
+				1FC3770C1EE7B9739EFF4AF3 /* [CP] Check Pods Manifest.lock */,
+				7D71E423297AE4950094F088 /* Sources */,
+				7D71E424297AE4950094F088 /* Frameworks */,
+				7D71E425297AE4950094F088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AntiSleep WatchKit Extension";
+			productName = "AntiSleep WatchKit Extension";
+			productReference = 7D71E427297AE4950094F088 /* AntiSleep WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D71E3FD297AE4910094F088 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7D71E404297AE4920094F088 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					7D71E418297AE4940094F088 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					7D71E426297AE4950094F088 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 7D71E400297AE4910094F088 /* Build configuration list for PBXProject "AntiSleep" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D71E3FC297AE4910094F088;
+			productRefGroup = 7D71E406297AE4920094F088 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D71E404297AE4920094F088 /* AntiSleep */,
+				7D71E418297AE4940094F088 /* AntiSleep WatchKit App */,
+				7D71E426297AE4950094F088 /* AntiSleep WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D71E403297AE4920094F088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D71E415297AE4940094F088 /* LaunchScreen.storyboard in Resources */,
+				7D71E412297AE4940094F088 /* Assets.xcassets in Resources */,
+				7D71E410297AE4920094F088 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D71E417297AE4940094F088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D71E422297AE4950094F088 /* Assets.xcassets in Resources */,
+				7D9A77B0298276E20045218C /* heart.png in Resources */,
+				7D71E420297AE4940094F088 /* Interface.storyboard in Resources */,
+				363F250C2981488200BC76DC /* PushNotificationPayload.apns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D71E425297AE4950094F088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D71E435297AE4960094F088 /* Assets.xcassets in Resources */,
+				7D9A77B1298276E20045218C /* heart.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FC3770C1EE7B9739EFF4AF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AntiSleep WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3833514305665FA94400E8B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AntiSleep WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		408B537C31335C32E8202D08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AntiSleep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D71E401297AE4920094F088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D71E40D297AE4920094F088 /* ViewController.swift in Sources */,
+				7D71E409297AE4920094F088 /* AppDelegate.swift in Sources */,
+				7D71E40B297AE4920094F088 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D71E423297AE4950094F088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D71E431297AE4950094F088 /* NotificationController.swift in Sources */,
+				7D71E433297AE4950094F088 /* ComplicationController.swift in Sources */,
+				7D71E42F297AE4950094F088 /* ExtensionDelegate.swift in Sources */,
+				7D71E42D297AE4950094F088 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D71E41C297AE4940094F088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D71E418297AE4940094F088 /* AntiSleep WatchKit App */;
+			targetProxy = 7D71E41B297AE4940094F088 /* PBXContainerItemProxy */;
+		};
+		7D71E42A297AE4950094F088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D71E426297AE4950094F088 /* AntiSleep WatchKit Extension */;
+			targetProxy = 7D71E429297AE4950094F088 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D71E40E297AE4920094F088 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D71E40F297AE4920094F088 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D71E413297AE4940094F088 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D71E414297AE4940094F088 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7D71E41E297AE4940094F088 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D71E41F297AE4940094F088 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D71E438297AE4960094F088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D71E439297AE4960094F088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7D71E43B297AE4960094F088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28BB150D76A77A6AE573779D /* Pods-AntiSleep WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "AntiSleep WatchKit Extension/AntiSleep WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AntiSleep WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = AntiSleep_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = AntiSleep_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		7D71E43C297AE4960094F088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C67CCA26F7C0A4E27D82FD /* Pods-AntiSleep WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "AntiSleep WatchKit Extension/AntiSleep WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AntiSleep WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = AntiSleep_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = AntiSleep_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		7D71E43F297AE4960094F088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A1AF2B0770A5E17DB4C6C3 /* Pods-AntiSleep WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = AntiSleep_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ju.AntiSleep;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		7D71E440297AE4960094F088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04BABD9CD039A09C6A618F3 /* Pods-AntiSleep WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = AntiSleep_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ju.AntiSleep;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		7D71E443297AE4960094F088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77E680C2398B28753E2C76D2 /* Pods-AntiSleep.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AntiSleep/AntiSleep.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AntiSleep/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D71E444297AE4960094F088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81DE5CD3C4FC3FAEF052678C /* Pods-AntiSleep.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AntiSleep/AntiSleep.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AntiSleep/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D71E400297AE4910094F088 /* Build configuration list for PBXProject "AntiSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D71E438297AE4960094F088 /* Debug */,
+				7D71E439297AE4960094F088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D71E43A297AE4960094F088 /* Build configuration list for PBXNativeTarget "AntiSleep WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D71E43B297AE4960094F088 /* Debug */,
+				7D71E43C297AE4960094F088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D71E43E297AE4960094F088 /* Build configuration list for PBXNativeTarget "AntiSleep WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D71E43F297AE4960094F088 /* Debug */,
+				7D71E440297AE4960094F088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D71E442297AE4960094F088 /* Build configuration list for PBXNativeTarget "AntiSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D71E443297AE4960094F088 /* Debug */,
+				7D71E444297AE4960094F088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D71E3FD297AE4910094F088 /* Project object */;
+}

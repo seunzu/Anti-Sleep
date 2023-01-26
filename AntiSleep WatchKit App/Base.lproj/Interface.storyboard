@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21507" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Bf-P3-v3p">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21501"/>
+    </dependencies>
+    <scenes>
+        <!--weather-->
+        <scene sceneID="otd-Cf-xfg">
+            <objects>
+                <hostingController identifier="weather" id="7Bf-P3-v3p">
+                    <connections>
+                        <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="WAl-0t-3Ug"/>
+                    </connections>
+                </hostingController>
+            </objects>
+            <point key="canvasLocation" x="-279" y="-142"/>
+        </scene>
+        <!--startDrive-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="startDrive" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" height="48" alignment="center" verticalAlignment="center" title="Drive" id="iNk-JY-VUq">
+                            <accessibilityTraits key="accessibilityTraits" button="YES" image="YES"/>
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                            <connections>
+                                <action selector="dBtnTapped" destination="AgC-eL-Hgc" id="eDQ-ch-gfb"/>
+                            </connections>
+                        </button>
+                        <timer alignment="center" verticalAlignment="bottom" textAlignment="center" id="R6h-f3-D2x">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </timer>
+                    </items>
+                    <connections>
+                        <outlet property="driveBtn" destination="iNk-JY-VUq" id="FGi-Fe-2Xj"/>
+                        <segue destination="nlS-Vz-nza" kind="relationship" relationship="nextPage" id="9NF-kS-wyM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="98" y="-142"/>
+        </scene>
+        <!--drive-->
+        <scene sceneID="8aI-ns-Rx1">
+            <objects>
+                <controller identifier="drive" id="nlS-Vz-nza" customClass="InterfaceController" customModule="AntiSleep_WatchKit_Extension">
+                    <items>
+                        <imageView width="130" height="130" alignment="center" image="heart" id="iff-f3-K3A"/>
+                        <group width="1" alignment="center" verticalAlignment="bottom" layout="vertical" id="9sx-dW-xak">
+                            <items>
+                                <label alignment="center" text="심박수 : 0" textAlignment="center" id="AJT-JP-B41">
+                                    <accessibilityTraits key="accessibilityTraits" none="YES"/>
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="center" text="졸음 운전 횟수 : 0" textAlignment="center" id="fZE-0a-sOK">
+                                    <accessibilityTraits key="accessibilityTraits" none="YES"/>
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="heartImage" destination="iff-f3-K3A" id="tZ7-av-TQ2"/>
+                        <outlet property="heartRateCountLabel" destination="AJT-JP-B41" id="poq-A4-pvG"/>
+                        <outlet property="sleepCountLabel" destination="fZE-0a-sOK" id="oBi-s7-wVF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="473" y="-142"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="98" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="240"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="384" height="384"/>
+    </resources>
+</document>
