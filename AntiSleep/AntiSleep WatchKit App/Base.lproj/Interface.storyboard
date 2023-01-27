@@ -94,7 +94,6 @@
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                         <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
                     </connections>
                 </notificationController>
             </objects>
@@ -136,13 +135,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="852" y="-142"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
-            <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="473" y="237"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

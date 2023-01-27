@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D138CDB43ED32AF2299C2E6 /* Pods_AntiSleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4519DA2D8893807FCE5BAC40 /* Pods_AntiSleep.framework */; };
+		360B74FD2983FE4E006A9DF3 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360B74FC2983FE4E006A9DF3 /* NotificationView.swift */; };
 		363F250C2981488200BC76DC /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 363F250B2981488200BC76DC /* PushNotificationPayload.apns */; };
 		3C205924BDACEF332805A474 /* Pods_AntiSleep_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F260A7F7B8F0A3A710B3F7 /* Pods_AntiSleep_WatchKit_Extension.framework */; };
 		4BDD192C8F14A09641205D35 /* Pods_AntiSleep_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */; };
@@ -79,6 +80,7 @@
 /* Begin PBXFileReference section */
 		186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntiSleep_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BB150D76A77A6AE573779D /* Pods-AntiSleep WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit Extension/Pods-AntiSleep WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		360B74FC2983FE4E006A9DF3 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		363F250B2981488200BC76DC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4519DA2D8893807FCE5BAC40 /* Pods_AntiSleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntiSleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A1AF2B0770A5E17DB4C6C3 /* Pods-AntiSleep WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep WatchKit App/Pods-AntiSleep WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				7DE414A829805F4D004A798B /* InterfaceControllers */,
 				7D71E42E297AE4950094F088 /* ExtensionDelegate.swift */,
 				7D71E430297AE4950094F088 /* NotificationController.swift */,
+				360B74FC2983FE4E006A9DF3 /* NotificationView.swift */,
 				7D34E0742983EF510000B3CF /* WeatherStructs.swift */,
 				7D71E432297AE4950094F088 /* ComplicationController.swift */,
 				7D71E436297AE4960094F088 /* Info.plist */,
@@ -485,6 +488,7 @@
 			files = (
 				7D71E431297AE4950094F088 /* NotificationController.swift in Sources */,
 				7D34E0732983EF460000B3CF /* WeatherViewController.swift in Sources */,
+				360B74FD2983FE4E006A9DF3 /* NotificationView.swift in Sources */,
 				7D71E433297AE4950094F088 /* ComplicationController.swift in Sources */,
 				7D71E42F297AE4950094F088 /* ExtensionDelegate.swift in Sources */,
 				7D71E42D297AE4950094F088 /* InterfaceController.swift in Sources */,

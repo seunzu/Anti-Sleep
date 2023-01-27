@@ -69,7 +69,7 @@ class InterfaceController: WKInterfaceController {
             } else {
                 if success {
                     print("권한이 허락되었습니다.")
-                    self.getHeartRateData()
+//                    self.getHeartRateData()
                 } else {
                     print("권한이 아직 없습니다.")
                 }
@@ -103,7 +103,7 @@ class InterfaceController: WKInterfaceController {
             self.heartRateBPM = String(format: "%.2f", latesHr)
             print("HeartRate : \(self.heartRateBPM) BPM")
             self.setLabel()
-            
+
             let dateFormator = DateFormatter()
             dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
             let StartDate = dateFormator.string(from: data.startDate)
