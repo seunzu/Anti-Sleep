@@ -15,10 +15,15 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var driveBtn: WKInterfaceButton!
     @IBOutlet weak var heartRateCountLabel: WKInterfaceLabel!
     @IBOutlet weak var sleepCountLabel: WKInterfaceLabel!
-    @IBOutlet weak var driveTimer: WKInterfaceTimer!
+    @IBOutlet weak var watchTimer: WKInterfaceTimer!
+    @IBOutlet weak var heartRateBtn: WKInterfaceButton!
+    @IBOutlet weak var weatherBtn: WKInterfaceButton!
     
-    var sleepCount : Int = 0
     let healthStore = HKHealthStore()
+    var heartRateBPM = String()
+    // 타이머 변수
+    var doneTimer:Timer = Timer()
+    var startedTimer:Bool = false
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
@@ -33,8 +38,21 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
     }
 
-    @IBAction func dBtnTapped() {
-        driveBtn.setTitle("Driving")
+    @IBAction func dBtnTapped() {        
+        if !startedTimer {
+            watchTimer.setDate(Date())
+            driveBtn.setTitle("Driving")
+            watchTimer.start()
+            
+        } else {
+            driveBtn.setTitle("Drive")
+            watchTimer.stop()
+        }
+        startedTimer = !startedTimer
+    }
+    
+    func setLabel() {
+        heartRateCountLabel.setText("HeartRate : \(self.heartRateBPM) BPM")
     }
 
     // healthKit 권한 요청
@@ -82,7 +100,9 @@ class InterfaceController: WKInterfaceController {
             let data = result![0] as! HKQuantitySample
             let unit = HKUnit(from: "count/min")
             let latesHr = data.quantity.doubleValue(for: unit)
-            print("HeartRate : \(latesHr) BPM")
+            self.heartRateBPM = String(format: "%.2f", latesHr)
+            print("HeartRate : \(self.heartRateBPM) BPM")
+            self.setLabel()
             
             let dateFormator = DateFormatter()
             dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"

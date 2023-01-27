@@ -22,5 +22,8 @@ target 'AntiSleep WatchKit Extension' do
   use_frameworks!
 
   # Pods for AntiSleep WatchKit Extension
+  pod 'Alamofire'
+  pod 'AlamofireImage', '~> 4.1'
+
 
 end
