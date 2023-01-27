@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21507" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21501"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hosting Controller-->
+        <scene sceneID="otd-Cf-xfg">
+            <objects>
+                <hostingController id="7Bf-P3-v3p">
+                    <connections>
+                        <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="WAl-0t-3Ug"/>
+                    </connections>
+                </hostingController>
+            </objects>
+            <point key="canvasLocation" x="-279" y="-142"/>
+        </scene>
+        <!--Drive-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Drive" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="85" height="85" alignment="center" image="drive" id="qpm-5k-lRE">
+                            <color key="tintColor" name="AccentColor"/>
+                        </imageView>
+                        <button width="1" height="54" alignment="center" title="Drive" id="iNk-JY-VUq">
+                            <accessibilityTraits key="accessibilityTraits" button="YES" image="YES"/>
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                            <connections>
+                                <action selector="dBtnTapped" destination="AgC-eL-Hgc" id="eDQ-ch-gfb"/>
+                            </connections>
+                        </button>
+                        <timer alignment="center" textAlignment="center" id="R6h-f3-D2x">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </timer>
+                        <button width="1" alignment="center" verticalAlignment="center" title="heartRate" id="o8b-YD-6Qj">
+                            <connections>
+                                <segue destination="nlS-Vz-nza" kind="modal" id="tBW-2S-RZK"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="center" title="weather" id="2gW-J2-u5x">
+                            <connections>
+                                <segue destination="bxh-dZ-UBy" kind="modal" id="1Ae-ND-Kpn"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="driveBtn" destination="iNk-JY-VUq" id="FGi-Fe-2Xj"/>
+                        <outlet property="driveImage" destination="qpm-5k-lRE" id="acM-IB-iap"/>
+                        <outlet property="heartRateBtn" destination="o8b-YD-6Qj" id="eJ6-sU-0wy"/>
+                        <outlet property="watchTimer" destination="R6h-f3-D2x" id="yQF-kb-AXe"/>
+                        <outlet property="weatherBtn" destination="2gW-J2-u5x" id="NVT-p8-WQ0"/>
+                        <segue destination="nlS-Vz-nza" kind="relationship" relationship="nextPage" id="9NF-kS-wyM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="79" y="-111"/>
+        </scene>
+        <!--heartRate-->
+        <scene sceneID="8aI-ns-Rx1">
+            <objects>
+                <controller identifier="heartRate" id="nlS-Vz-nza" customClass="InterfaceController" customModule="AntiSleep_WatchKit_Extension">
+                    <items>
+                        <imageView width="130" height="130" alignment="center" image="heart" id="iff-f3-K3A"/>
+                        <group width="1" height="64" alignment="center" verticalAlignment="bottom" layout="vertical" id="9sx-dW-xak">
+                            <items>
+                                <label alignment="center" text="Label" textAlignment="center" id="AJT-JP-B41">
+                                    <accessibilityTraits key="accessibilityTraits" none="YES"/>
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="fZE-0a-sOK">
+                                    <accessibilityTraits key="accessibilityTraits" none="YES"/>
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="heartImage" destination="iff-f3-K3A" id="tZ7-av-TQ2"/>
+                        <outlet property="heartRateCountLabel" destination="AJT-JP-B41" id="poq-A4-pvG"/>
+                        <outlet property="sleepCountLabel" destination="fZE-0a-sOK" id="oBi-s7-wVF"/>
+                        <segue destination="bxh-dZ-UBy" kind="relationship" relationship="nextPage" id="ae1-nt-Oyc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="442" y="-142"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="79" y="590"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="590"/>
+        </scene>
+        <!--weather-->
+        <scene sceneID="OwO-WL-mPV">
+            <objects>
+                <controller identifier="weather" id="bxh-dZ-UBy" customClass="WeatherViewController" customModule="AntiSleep_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="center" spacing="5" id="Uks-mY-QIe">
+                            <items>
+                                <imageView width="97" height="94" alignment="left" verticalAlignment="center" image="13" id="Ooe-Xr-QT8"/>
+                                <group width="1" alignment="right" verticalAlignment="center" layout="vertical" spacing="10" id="cwg-FV-Fcq">
+                                    <items>
+                                        <label alignment="left" text="Label" textAlignment="center" id="5Un-tg-jE5">
+                                            <fontDescription key="font" type="system" pointSize="25"/>
+                                        </label>
+                                        <label alignment="left" text="Label" textAlignment="center" id="cSp-iG-zAK">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="WeatherImage" destination="Ooe-Xr-QT8" id="7of-iw-ZCR"/>
+                        <outlet property="tempLabel" destination="cSp-iG-zAK" id="VXg-2b-aAZ"/>
+                        <outlet property="weatherLabel" destination="5Un-tg-jE5" id="91K-J1-s58"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="794" y="-143"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Ae-ND-Kpn"/>
+        <segue reference="tBW-2S-RZK"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="13" width="100" height="100"/>
+        <image name="drive" width="512" height="512"/>
+        <image name="heart" width="384" height="384"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

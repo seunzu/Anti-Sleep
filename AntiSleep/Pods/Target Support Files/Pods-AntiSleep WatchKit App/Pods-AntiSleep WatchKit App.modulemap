@@ -1,0 +1,6 @@
+framework module Pods_AntiSleep_WatchKit_App {
+  umbrella header "Pods-AntiSleep WatchKit App-umbrella.h"
+
+  export *
+  module * { export * }
+}
