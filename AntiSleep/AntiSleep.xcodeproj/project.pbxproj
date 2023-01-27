@@ -14,10 +14,10 @@
 		4BDD192C8F14A09641205D35 /* Pods_AntiSleep_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186BFF93B24BD0FA60D3F4CF /* Pods_AntiSleep_WatchKit_App.framework */; };
 		7D34E0732983EF460000B3CF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D34E0722983EF460000B3CF /* WeatherViewController.swift */; };
 		7D34E0752983EF510000B3CF /* WeatherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D34E0742983EF510000B3CF /* WeatherStructs.swift */; };
-		7D34E0772983EFC40000B3CF /* WeatherImage in Resources */ = {isa = PBXBuildFile; fileRef = 7D34E0762983EFC40000B3CF /* WeatherImage */; };
-		7D34E0782983EFC40000B3CF /* WeatherImage in Resources */ = {isa = PBXBuildFile; fileRef = 7D34E0762983EFC40000B3CF /* WeatherImage */; };
 		7D34E07A2983F3CE0000B3CF /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D34E0792983F3CE0000B3CF /* heart.png */; };
 		7D34E07B2983F3CE0000B3CF /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D34E0792983F3CE0000B3CF /* heart.png */; };
+		7D34E080298413650000B3CF /* drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D34E07F298413650000B3CF /* drive.png */; };
+		7D34E081298413650000B3CF /* drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D34E07F298413650000B3CF /* drive.png */; };
 		7D71E409297AE4920094F088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E408297AE4920094F088 /* AppDelegate.swift */; };
 		7D71E40B297AE4920094F088 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E40A297AE4920094F088 /* SceneDelegate.swift */; };
 		7D71E40D297AE4920094F088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E40C297AE4920094F088 /* ViewController.swift */; };
@@ -88,8 +88,8 @@
 		77E680C2398B28753E2C76D2 /* Pods-AntiSleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep.debug.xcconfig"; path = "Target Support Files/Pods-AntiSleep/Pods-AntiSleep.debug.xcconfig"; sourceTree = "<group>"; };
 		7D34E0722983EF460000B3CF /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		7D34E0742983EF510000B3CF /* WeatherStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStructs.swift; sourceTree = "<group>"; };
-		7D34E0762983EFC40000B3CF /* WeatherImage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherImage; sourceTree = "<group>"; };
 		7D34E0792983F3CE0000B3CF /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		7D34E07F298413650000B3CF /* drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drive.png; sourceTree = "<group>"; };
 		7D71E405297AE4920094F088 /* AntiSleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiSleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D71E408297AE4920094F088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D71E40A297AE4920094F088 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		7D9A77AB298273BA0045218C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7D34E07F298413650000B3CF /* drive.png */,
 				7D34E0792983F3CE0000B3CF /* heart.png */,
-				7D34E0762983EFC40000B3CF /* WeatherImage */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -365,11 +365,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D34E080298413650000B3CF /* drive.png in Resources */,
 				7D71E422297AE4950094F088 /* Assets.xcassets in Resources */,
 				7D71E420297AE4940094F088 /* Interface.storyboard in Resources */,
 				7D34E07A2983F3CE0000B3CF /* heart.png in Resources */,
 				363F250C2981488200BC76DC /* PushNotificationPayload.apns in Resources */,
-				7D34E0772983EFC40000B3CF /* WeatherImage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D71E435297AE4960094F088 /* Assets.xcassets in Resources */,
+				7D34E081298413650000B3CF /* drive.png in Resources */,
 				7D34E07B2983F3CE0000B3CF /* heart.png in Resources */,
-				7D34E0782983EFC40000B3CF /* WeatherImage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +732,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ASM49GKW7Z;
@@ -759,6 +760,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ASM49GKW7Z;

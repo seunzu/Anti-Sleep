@@ -20,7 +20,6 @@ class NotificationController: WKUserNotificationHostingController<NotificationVi
         NotificationView(
             title: title,
             message: message
-            
         )
     }
     

@@ -10,6 +10,7 @@ import UserNotifications
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
         
+    // 알람 구현
         func didRegisterForRemoteNotifications(withDeviceToken deviceToken: Data) {
             print(deviceToken.reduce("") { $0 + String(format: "%02x", $1) })
           }

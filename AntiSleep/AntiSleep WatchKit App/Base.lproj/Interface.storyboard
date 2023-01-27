@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21501"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Hosting Controller-->
@@ -22,16 +23,19 @@
             <objects>
                 <controller identifier="Drive" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AntiSleep_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <timer alignment="center" verticalAlignment="bottom" textAlignment="center" id="R6h-f3-D2x">
-                            <fontDescription key="font" type="system" pointSize="20"/>
-                        </timer>
-                        <button width="1" height="48" alignment="center" title="Drive" id="iNk-JY-VUq">
+                        <imageView width="85" height="85" alignment="center" image="drive" id="qpm-5k-lRE">
+                            <color key="tintColor" name="AccentColor"/>
+                        </imageView>
+                        <button width="1" height="54" alignment="center" title="Drive" id="iNk-JY-VUq">
                             <accessibilityTraits key="accessibilityTraits" button="YES" image="YES"/>
                             <fontDescription key="font" type="system" pointSize="25"/>
                             <connections>
                                 <action selector="dBtnTapped" destination="AgC-eL-Hgc" id="eDQ-ch-gfb"/>
                             </connections>
                         </button>
+                        <timer alignment="center" textAlignment="center" id="R6h-f3-D2x">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </timer>
                         <button width="1" alignment="center" verticalAlignment="center" title="heartRate" id="o8b-YD-6Qj">
                             <connections>
                                 <segue destination="nlS-Vz-nza" kind="modal" id="tBW-2S-RZK"/>
@@ -45,6 +49,7 @@
                     </items>
                     <connections>
                         <outlet property="driveBtn" destination="iNk-JY-VUq" id="FGi-Fe-2Xj"/>
+                        <outlet property="driveImage" destination="qpm-5k-lRE" id="acM-IB-iap"/>
                         <outlet property="heartRateBtn" destination="o8b-YD-6Qj" id="eJ6-sU-0wy"/>
                         <outlet property="watchTimer" destination="R6h-f3-D2x" id="yQF-kb-AXe"/>
                         <outlet property="weatherBtn" destination="2gW-J2-u5x" id="NVT-p8-WQ0"/>
@@ -52,7 +57,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="98" y="-142"/>
+            <point key="canvasLocation" x="79" y="-111"/>
         </scene>
         <!--heartRate-->
         <scene sceneID="8aI-ns-Rx1">
@@ -81,7 +86,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="473" y="-142"/>
+            <point key="canvasLocation" x="442" y="-142"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -113,7 +118,7 @@
                     <items>
                         <group width="1" alignment="center" spacing="5" id="Uks-mY-QIe">
                             <items>
-                                <imageView width="108" alignment="left" verticalAlignment="center" image="13" id="Ooe-Xr-QT8"/>
+                                <imageView width="97" height="94" alignment="left" verticalAlignment="center" image="13" id="Ooe-Xr-QT8"/>
                                 <group width="1" alignment="right" verticalAlignment="center" layout="vertical" spacing="10" id="cwg-FV-Fcq">
                                     <items>
                                         <label alignment="left" text="Label" textAlignment="center" id="5Un-tg-jE5">
@@ -134,15 +139,19 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="852" y="-142"/>
+            <point key="canvasLocation" x="794" y="-143"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ae1-nt-Oyc"/>
-        <segue reference="9NF-kS-wyM"/>
+        <segue reference="1Ae-ND-Kpn"/>
+        <segue reference="tBW-2S-RZK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="13" width="100" height="100"/>
+        <image name="drive" width="512" height="512"/>
         <image name="heart" width="384" height="384"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

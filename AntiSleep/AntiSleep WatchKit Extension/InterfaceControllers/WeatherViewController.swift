@@ -51,7 +51,8 @@ class WeatherViewController:WKInterfaceController {
     }
         func settings(_ WData:WeatherData, _ TData:TempData) {
 //            아이콘 설정
-            WeatherImage.setImageNamed("\(WData.icon.prefix(2)).png")
+            let icon = String(WData.icon.prefix(2))
+            WeatherImage.setImageNamed(icon)
 //            WeatherImage.setImageNamed("heart.png")
             //날씨 설정
             weatherLabel.setText(WData.description)

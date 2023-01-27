@@ -11,6 +11,7 @@ import HealthKit
 import CoreLocation
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var driveImage: WKInterfaceImage!
     @IBOutlet weak var heartImage: WKInterfaceImage!
     @IBOutlet weak var driveBtn: WKInterfaceButton!
     @IBOutlet weak var heartRateCountLabel: WKInterfaceLabel!
@@ -28,6 +29,7 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
         authorizeHealthKit()
+//        setLabel()
     }
 
     override func willActivate() {
@@ -52,7 +54,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     func setLabel() {
-        heartRateCountLabel.setText("HeartRate : \(self.heartRateBPM) BPM")
+        self.heartRateCountLabel.setText("HeartRate : \(self.heartRateBPM) BPM")
     }
 
     // healthKit 권한 요청
@@ -69,7 +71,7 @@ class InterfaceController: WKInterfaceController {
             } else {
                 if success {
                     print("권한이 허락되었습니다.")
-//                    self.getHeartRateData()
+                    self.getHeartRateData()
                 } else {
                     print("권한이 아직 없습니다.")
                 }
@@ -102,7 +104,6 @@ class InterfaceController: WKInterfaceController {
             let latesHr = data.quantity.doubleValue(for: unit)
             self.heartRateBPM = String(format: "%.2f", latesHr)
             print("HeartRate : \(self.heartRateBPM) BPM")
-            self.setLabel()
 
             let dateFormator = DateFormatter()
             dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
