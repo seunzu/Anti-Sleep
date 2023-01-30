@@ -115,7 +115,7 @@ class InterfaceController: WKInterfaceController {
         let end = Date()
         
         let sample = HKCategorySample(
-            type: HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis) ?? <#default value#>,
+            type: HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
             value: HKCategoryValueSleepAnalysis.Asleep.rawValue,
             start: start,
             end: end
@@ -125,7 +125,7 @@ class InterfaceController: WKInterfaceController {
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
         
         
-        let sleepQuery = HKSampleQuery(sampleType: HKCategoryType(.sleepAnalysis), predicate: predicate, limit: 30, sortDescriptors: [sortDescriptor]) { [self] (query, sleepResult, error) -> Void in
+        let sleepQuery = HKSampleQuery(sampleType: HKCategoryType(.sleepAnalysis), predicate: predicate, limit: 30, sortDescriptors: [sortDescriptor]) {(query, sleepResult, error) -> Void in
             
             if error != nil {
                 return
@@ -143,9 +143,8 @@ class InterfaceController: WKInterfaceController {
                     }
                 }
             }
-            
-            healthStore.execute(sleepQuery)
         }
+        healthStore.execute(sleepQuery)
     }
     
     /*private func loadTableData() {

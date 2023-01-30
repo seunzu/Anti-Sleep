@@ -31,7 +31,7 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="label" destination="ZAQ-Ow-B6r" id="PqZ-Hb-tqs"/>
+                                        <outlet property="rowLabel" destination="ZAQ-Ow-B6r" id="qpb-Yv-hdD"/>
                                     </connections>
                                 </tableRow>
                             </items>
