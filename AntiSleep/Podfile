@@ -6,6 +6,8 @@ target 'AntiSleep' do
   use_frameworks!
 
   # Pods for AntiSleep
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 
 end
 

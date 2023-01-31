@@ -33,6 +33,8 @@
 		7D71E431297AE4950094F088 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E430297AE4950094F088 /* NotificationController.swift */; };
 		7D71E433297AE4950094F088 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71E432297AE4950094F088 /* ComplicationController.swift */; };
 		7D71E435297AE4960094F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D71E434297AE4960094F088 /* Assets.xcassets */; };
+		7DA808AC298953B200C27C1B /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA808AB298953B200C27C1B /* HapticManager.swift */; };
+		7DA808AE298953C200C27C1B /* AppWeatherStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA808AD298953C200C27C1B /* AppWeatherStructs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		7D71E432297AE4950094F088 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		7D71E434297AE4960094F088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D71E436297AE4960094F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DA808AB298953B200C27C1B /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		7DA808AD298953C200C27C1B /* AppWeatherStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWeatherStructs.swift; sourceTree = "<group>"; };
 		7DE414A929806330004A798B /* AntiSleep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AntiSleep.entitlements; sourceTree = "<group>"; };
 		7DE414AC2980659C004A798B /* AntiSleep WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AntiSleep WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		81DE5CD3C4FC3FAEF052678C /* Pods-AntiSleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntiSleep.release.xcconfig"; path = "Target Support Files/Pods-AntiSleep/Pods-AntiSleep.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				7DE414A929806330004A798B /* AntiSleep.entitlements */,
+				7DA808AB298953B200C27C1B /* HapticManager.swift */,
 				7D71E408297AE4920094F088 /* AppDelegate.swift */,
+				7DA808AD298953C200C27C1B /* AppWeatherStructs.swift */,
 				7D71E40A297AE4920094F088 /* SceneDelegate.swift */,
 				7D71E40C297AE4920094F088 /* ViewController.swift */,
 				7D71E40E297AE4920094F088 /* Main.storyboard */,
@@ -260,6 +266,7 @@
 				7D71E402297AE4920094F088 /* Frameworks */,
 				7D71E403297AE4920094F088 /* Resources */,
 				7D71E441297AE4960094F088 /* Embed Watch Content */,
+				63C9027641F3240C396DCA62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -452,6 +459,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		63C9027641F3240C396DCA62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AntiSleep/Pods-AntiSleep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AntiSleep/Pods-AntiSleep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AntiSleep/Pods-AntiSleep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9CF18582687268023E4248D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,7 +501,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D71E40D297AE4920094F088 /* ViewController.swift in Sources */,
+				7DA808AE298953C200C27C1B /* AppWeatherStructs.swift in Sources */,
 				7D71E409297AE4920094F088 /* AppDelegate.swift in Sources */,
+				7DA808AC298953B200C27C1B /* HapticManager.swift in Sources */,
 				7D71E40B297AE4920094F088 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,7 +682,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AntiSleep WatchKit Extension/AntiSleep WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				DEVELOPMENT_TEAM = 8JK489L733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AntiSleep WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit Extension";
@@ -675,7 +701,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seyeon.AntiSleep.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -694,7 +720,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AntiSleep WatchKit Extension/AntiSleep WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				DEVELOPMENT_TEAM = 8JK489L733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AntiSleep WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit Extension";
@@ -713,7 +739,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seyeon.AntiSleep.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -735,14 +761,14 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				DEVELOPMENT_TEAM = 8JK489L733;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = AntiSleep_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ju.AntiSleep;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.seyeon.AntiSleep;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seyeon.AntiSleep.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -763,14 +789,14 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				DEVELOPMENT_TEAM = 8JK489L733;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = AntiSleep_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "AntiSleep WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ju.AntiSleep;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.seyeon.AntiSleep;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seyeon.AntiSleep.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -791,7 +817,7 @@
 				CODE_SIGN_ENTITLEMENTS = AntiSleep/AntiSleep.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				DEVELOPMENT_TEAM = 8JK489L733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AntiSleep/Info.plist;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
@@ -808,7 +834,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seyeon.AntiSleep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -826,7 +852,7 @@
 				CODE_SIGN_ENTITLEMENTS = AntiSleep/AntiSleep.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ASM49GKW7Z;
+				DEVELOPMENT_TEAM = 8JK489L733;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AntiSleep/Info.plist;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "AntiSleep wants to access your health data in order to analyze your health and best advice";
@@ -843,7 +869,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ju.AntiSleep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seyeon.AntiSleep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;

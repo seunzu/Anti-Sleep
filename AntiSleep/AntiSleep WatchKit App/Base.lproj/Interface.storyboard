@@ -64,12 +64,16 @@
             <objects>
                 <controller identifier="heartRate" id="nlS-Vz-nza" customClass="InterfaceController" customModule="AntiSleep_WatchKit_Extension">
                     <items>
-                        <imageView width="130" height="130" alignment="center" image="heart" id="iff-f3-K3A"/>
+                        <button width="120" height="120" alignment="center" backgroundImage="heart" id="I1E-gc-YdU">
+                            <connections>
+                                <action selector="hrbBtn" destination="nlS-Vz-nza" id="7ML-Vj-SO4"/>
+                            </connections>
+                        </button>
                         <group width="1" height="64" alignment="center" verticalAlignment="bottom" layout="vertical" id="9sx-dW-xak">
                             <items>
-                                <label alignment="center" text="Label" textAlignment="center" id="AJT-JP-B41">
+                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="AJT-JP-B41">
                                     <accessibilityTraits key="accessibilityTraits" none="YES"/>
-                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
                                 </label>
                                 <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="fZE-0a-sOK">
                                     <accessibilityTraits key="accessibilityTraits" none="YES"/>
@@ -79,9 +83,9 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="heartImage" destination="iff-f3-K3A" id="tZ7-av-TQ2"/>
+                        <outlet property="alarmLabel" destination="fZE-0a-sOK" id="rWa-zQ-QLh"/>
+                        <outlet property="heartRateBpmBtn" destination="I1E-gc-YdU" id="Iwo-pA-rSV"/>
                         <outlet property="heartRateCountLabel" destination="AJT-JP-B41" id="poq-A4-pvG"/>
-                        <outlet property="sleepCountLabel" destination="fZE-0a-sOK" id="oBi-s7-wVF"/>
                         <segue destination="bxh-dZ-UBy" kind="relationship" relationship="nextPage" id="ae1-nt-Oyc"/>
                     </connections>
                 </controller>
@@ -131,10 +135,28 @@
                                 </group>
                             </items>
                         </group>
+                        <label alignment="center" text="Label" numberOfLines="2" id="7tB-Zv-wc3">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <button width="80" height="80" alignment="right" verticalAlignment="bottom" backgroundImage="sleep2" id="rM0-kv-vio">
+                            <connections>
+                                <action selector="sBtnTapped" destination="bxh-dZ-UBy" id="a8z-LP-gmt"/>
+                            </connections>
+                        </button>
+                        <label alignment="center" verticalAlignment="bottom" text="Label" textAlignment="center" id="zrf-pr-4ux">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="bottom" text="Label" id="1QC-rQ-geL">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="WeatherImage" destination="Ooe-Xr-QT8" id="7of-iw-ZCR"/>
+                        <outlet property="sleepBtn" destination="rM0-kv-vio" id="G6c-ys-g3k"/>
+                        <outlet property="sleepDataLabel" destination="1QC-rQ-geL" id="1Ua-S5-cXh"/>
                         <outlet property="tempLabel" destination="cSp-iG-zAK" id="VXg-2b-aAZ"/>
+                        <outlet property="totalSleepLabel" destination="zrf-pr-4ux" id="RHW-yx-ehA"/>
+                        <outlet property="warningLabel" destination="7tB-Zv-wc3" id="8Sp-jg-aPS"/>
                         <outlet property="weatherLabel" destination="5Un-tg-jE5" id="91K-J1-s58"/>
                     </connections>
                 </controller>
@@ -143,13 +165,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Ae-ND-Kpn"/>
+        <segue reference="ae1-nt-Oyc"/>
         <segue reference="tBW-2S-RZK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="13" width="100" height="100"/>
         <image name="drive" width="512" height="512"/>
         <image name="heart" width="384" height="384"/>
+        <image name="sleep2" width="512" height="512"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
