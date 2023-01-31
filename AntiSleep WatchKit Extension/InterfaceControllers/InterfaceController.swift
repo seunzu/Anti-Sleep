@@ -1,10 +1,3 @@
-//
-//  InterfaceController.swift
-//  AntiSleep WatchKit Extension
-//
-//  Created by suhseungju on 2023/01/21.
-//
-
 import WatchKit
 import Foundation
 import HealthKit
