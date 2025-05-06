@@ -1,9 +1,5 @@
 # Anti-Sleep
-## guru2_ios_project
-https://zzoo0123.notion.site/IOS-38d5adfb78d342519fc079ec19be73bb
-
-### Flow
-
+## 기획
 ### 1. 운전 시작
 
 - (↓)  데이터 < 평균 수면 시간 → 버튼 클릭 시 이벤트 발생
@@ -29,3 +25,8 @@ https://zzoo0123.notion.site/IOS-38d5adfb78d342519fc079ec19be73bb
 
 - 졸음 횟수 ()
 - 평균 심박수 ()
+---
+
+## 영상
+- [PPT 발표](https://www.youtube.com/watch?v=XZ6dYLWX9WQ)
+- [시연 영상](https://www.youtube.com/shorts/KZm4c5W61NU?feature=share)
